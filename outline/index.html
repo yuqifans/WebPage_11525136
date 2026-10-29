@@ -2121,7 +2121,7 @@
 
       <div class="promo-code-card">
         <p>專屬折扣代碼（點擊複製）</p>
-        <div class="promo-code-badge" id="promoCodeBtn" title="點擊複製代碼">BUNNY88</div>
+        <div class="promo-code-badge" id="promoCodeBtn" onclick="copyPromoCode()" title="點擊複製代碼" style="cursor: pointer;">BUNNY88</div>
         <div>
           <button class="btn btn-primary btn-sm" onclick="copyPromoCode()">複製優惠代碼</button>
         </div>
@@ -2463,6 +2463,7 @@
     coffeeGramsInput.addEventListener('input', updateBrewCalculation);
     ratioSelect.addEventListener('change', updateBrewCalculation);
     roastSelect.addEventListener('change', updateBrewCalculation);
+    updateBrewCalculation();
 
     // Cart Management
     function addToCart(title, price) {
